@@ -1,11 +1,9 @@
 /*
 Author:     Brandon M. Piper
-Title:      Coding Challenge for Centerfield Media
 
 Design enables large number of similar layouts with minimal changes for scalability. 
 Responsive with any dimensions or device. Wrapper contains all elements of page 
 allowing for variable width of entire application with only one line of CSS.
-Improvisations used where specifications lacking. 
 */
 #wrapper{
     position: relative;
@@ -222,7 +220,6 @@ Append any body element to separate bodies enabling any order. */
         clear: both;
     }
 }
-
 
 /* CSS default property resets */
 *{ margin: 0; border: 0px; padding: 0px; box-sizing: border-box; font: 12px Arial, sans-serif, times; }
