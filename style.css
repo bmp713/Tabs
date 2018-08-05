@@ -1,0 +1,230 @@
+/*
+Author:     Brandon M. Piper
+Title:      Coding Challenge for Centerfield Media
+
+Design enables large number of similar layouts with minimal changes for scalability. 
+Responsive with any dimensions or device. Wrapper contains all elements of page 
+allowing for variable width of entire application with only one line of CSS.
+Improvisations used where specifications lacking. 
+*/
+#wrapper{
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+#content{
+    position: relative;
+    margin: 50px auto 0 auto;
+    width: 50%;
+    height: auto;
+    background: white;
+}
+#content h1{
+    color: black;
+}
+/* Fix tabs inline for desktop layout. 
+Append any body element to separate bodies enabling any order. */
+#tabs{
+    position: fixed;
+    margin: auto;
+    width: 70%;
+    z-index: 9;
+}
+    #tab_1, #tab_2, #tab_3{
+        /* Layout properties separare from visual. 
+        Percentages used for responsiveneess. */
+        position: relative;
+        margin: auto 1% 2.5% 0;
+        padding: 15px 0px;
+        display: block;
+        float: left;
+        width: 25%;
+        /* Tabs always on top. Z-index 10 
+        leaves space for scalability */
+        z-index: 10; 
+        /* Visual properties */
+        color: black;
+        cursor: pointer;
+        text-align: center;
+        font: 20px arial, sans-serif;
+        background: lightgray;  
+    }
+    /* Select tab_1 by default */
+    #tab_1{
+        color: white;
+        background: black;
+    }
+    #plus_minus_1, #plus_minus_2, #plus_minus_3{
+        display: none;
+        float: right;
+        font: 24px arial, sans-serif;
+    }
+    /* Body divided into separate body elements enabling any possible layout.
+    Convention: body_11 corresponds to tab_1 and it's first body element. */
+    #body{
+        position: relative;
+        margin: 100px auto;
+        padding: 50px 0 0 0;
+        width: 100%;
+    }
+    #body_1, #body_2, #body_3{
+        display: none;
+        position: relative;
+        width: inherit;
+    }
+    #body_11{
+        display: block;
+        float: left;
+        clear: both;
+        width: 30%;
+        height: 200px;
+        background: black;
+    }
+    #body_12{
+        display: block;
+        float: right;
+        width: 60%;
+        font: 16px arial, sans-serif;
+    }
+    #body_13{
+        display: block;
+        clear: both;
+    }
+    #subtitle{
+        font: 18px Arial;
+    }
+    #body_21{
+        display: block;
+        float: left;
+        width: 100%;
+        text-align: center;
+        font: 66px arial, sans-serif;
+    }
+    #title{
+        font: 48px arial, sans-serif;
+    }
+    #body_22{
+        display: block;
+        float: right;
+        width: 100%;
+    }
+    #body_31{
+        display: block;
+        margin: auto;
+        float: left;
+        width: 30%;
+        text-align: right;
+        font: 56px arial, sans-serif;
+    }
+    #body_32{
+        display: block;
+        float: right;
+        width: 60%;
+        height: 200px;
+        background: black
+    }
+    #body_33{
+        display: block;
+        clear: both;
+    }
+
+
+/* Media query for mobile layout */
+@media( max-width: 768px ){
+#wrapper{
+    width: 100%;
+}
+#content{
+    margin: 0 auto 0 auto;
+    width: 100%;
+}
+#content h1{
+    color: black;
+}
+#tabs{
+    width: 100%;
+}
+    #tab_1, #tab_2, #tab_3{
+        display: block;
+        margin: 1% auto 0 auto;
+
+        float: left;
+        width: 100%;
+        top: 0;
+        padding: 15px 15px;
+
+
+        text-align: left;
+        font: 20px arial, sans-serif;
+    }
+    /* Select tab_1 by default */
+    #tab_1{
+        color: white;
+        background: black;
+    }
+    /* Properties for +/- icons */
+    #plus_minus_1, #plus_minus_2, #plus_minus_3{
+        display: block;
+    }
+    #body{
+        margin: 0 auto;
+        padding: 0 0 0 0;
+    }
+    #body_11{
+        display: block;
+        float: left;
+        clear: none;
+        width: 100%;
+    }
+    #body_12{
+        display: block;
+        width: 100%;
+        float: left;
+    }
+    #body_13{
+        display: block;
+        clear: none;
+        font: 48px Arial;
+    }
+    #subtitle{
+        font: 48px arial, sans-serif;
+    }
+    #body_21{
+        display: block;
+        width: 100%;
+        float: left;
+        font: 66px Arial;
+        text-align: center;
+    }
+    #body_22{
+        display: block;
+        float: left;
+        width: 100%;
+    }
+    #body_31{
+        display: block;
+        width: 100%;
+        float: left;
+        text-align: center;
+        font: 36px arial, sans-serif;
+    }
+    #subtitle{
+        font: 48px Arial;
+    }
+    #body_32{
+        display: block;
+        float: left;
+        width: 100%;
+        background: black;
+    }
+    #body_33{
+        display: block;
+        clear: both;
+    }
+}
+
+
+/* CSS default property resets */
+*{ margin: 0; border: 0px; padding: 0px; box-sizing: border-box; font: 12px Arial, sans-serif, times; }
+a{ cursor: pointer; text-decoration: none; }
+
