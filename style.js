@@ -1,11 +1,10 @@
 /*
 Author:     Brandon M. Piper
-Title:      Coding Challenge for Centerfield Media
 
 Design enables large number of similar layouts with minimal changes for scalability. 
 Responsive with any dimensions or device. Wrapper contains all elements of page 
 allowing for variable width of entire application with only one line of CSS.
-Improvisations used where specifications were lacking. */
+*/
 
 // Boolean flags for current tab
 var tabs = ["false", "false", "false"];
@@ -61,7 +60,6 @@ function tabClick( tab ){
             document.querySelector( '#body_1' ).style.display = 'none';
             document.querySelector( '#body_2' ).style.display = 'none';
             document.querySelector( '#body_3' ).style.display = 'block';
-
             break;
     }
 
